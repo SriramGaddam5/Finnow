@@ -10,6 +10,10 @@ import "../src/styles/App.css";
 function App() {
   return (
     <div>
+      <link
+        rel="stylesheet"
+        href="//fonts.googleapis.com/css?family=Quicksand&amp;lang=en"
+      />
       <Navbar />
       <Router>
         <Routes>
