@@ -1,11 +1,19 @@
 import { Flex, Link, Spacer, Text, Box, Tooltip } from "@chakra-ui/react";
 import "../styles/Footer.css";
+import { FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+
+
 
 function Footer() {
   return (
     <div id="Footer">
-      <Flex p={5} mt={10} bg="blue.900" color="white" gap="5">
+      <Flex p={5} mt={10} bg="blue.900" color="white" gap="5" alignItems='center'>
         <Text p="1">© 2024 Finnow</Text>
+        <FaInstagram />
+        <Link href="https://github.com/SriramGaddam5/Finnow" isExternal>
+        <FaYoutube />
+        </Link>
         <Spacer/>
         <Spacer/>
         <Tooltip label="Our Privacy Policy" rounded="lg">
