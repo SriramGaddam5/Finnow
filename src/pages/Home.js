@@ -1,8 +1,9 @@
-import { Text, VStack, HStack } from "@chakra-ui/react";
-import { useEffect, useMemo, useState } from "react";
+import { Text, VStack, HStack, SlideFade } from "@chakra-ui/react";
+import { useEffect, useMemo, useState, useRef } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import InfoCard from "../components/InfoCard";
+import { useInViewport } from "react-in-viewport";
 import "../styles/Home.css";
 
 function Home() {
@@ -19,26 +20,48 @@ function Home() {
     console.log(container);
   };
 
+  const ref = useRef(null);
+  const { enterCount } = useInViewport(
+    ref,
+    { rootMargin: "-300px" },
+    { disconnectOnLeave: false },
+    {}
+  );
+
   const options = useMemo(
     () => ({
+      fullScreen: {
+        enable: false,
+        zIndex: 0,
+      },
       interactivity: {
+        detect_on: "canvas",
         events: {
+          onHover: {
+            enable: true,
+            mode: "bubble",
+            parallax: {
+              enable: false,
+              force: 60,
+              smooth: 10,
+            },
+          },
           onClick: {
             enable: true,
             mode: "push",
           },
-          onHover: {
-            enable: true,
-            mode: "repulse",
-          },
+          resize: true,
         },
         modes: {
-          push: {
-            quantity: 4,
+          bubble: {
+            distance: 30,
+            size: 20,
+            duration: 2,
+            opacity: 1,
+            speed: 2,
           },
-          repulse: {
-            distance: 200,
-            duration: 0.4,
+          push: {
+            particles_nb: 1,
           },
         },
       },
@@ -73,36 +96,53 @@ function Home() {
           width: 1,
         },
         move: {
-          direction: "none",
           enable: true,
-          outModes: {
-            default: "bounce",
-          },
+          speed: { min: 1, max: 3 },
+          direction: "none",
           random: false,
-          speed: 6,
           straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200,
+          },
         },
         number: {
+          value: 200,
+          limit: 300,
           density: {
             enable: true,
+            value_area: 800,
           },
-          value: 80,
         },
         opacity: {
-          value: 0.5,
+          value: 0,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 1,
+            opacity_min: 0,
+            sync: false,
+          },
         },
         shape: {
-          type: "polygon",
+          type: "circle",
           stroke: {
             width: 1,
             color: "#ffffff",
           },
-          polygon: {
-            nb_sides: 6,
-          },
         },
         size: {
           value: { min: 1, max: 5 },
+          random: true,
+          anim: {
+            enable: true,
+            speed: 10,
+            size_min: 1,
+            sync: false,
+          },
         },
       },
       detectRetina: true,
@@ -113,21 +153,36 @@ function Home() {
   if (init) {
     return (
       <div id="Body">
-        {/* <Particles
+        <Particles
           id="particles"
           particlesLoaded={particlesLoaded}
           options={options}
-        /> */}
+        />
         <VStack>
-          <Text
-            id="title"
-            bgGradient="linear(to-r, blue.200, blue.900)"
-            bgClip="text"
-            fontSize="100"
-            fontWeight="extrabold"
-            mt={10}>
-            Finnow
-          </Text>
+          <SlideFade in={enterCount > 0} direction="left" offsetX="-100px">
+            <Text
+              id="title"
+              ref={ref}
+              bgGradient="linear(to-r, blue.200, blue.900)"
+              bgClip="text"
+              fontSize="100"
+              fontWeight="extrabold"
+              mt={10}>
+              Finnow
+            </Text>
+          </SlideFade>
+
+          <SlideFade in={enterCount > 0} direction="right" offsetX="100px">
+            <Text
+              ref={ref}
+              bgGradient="linear(to-r, blue.200, blue.900)"
+              bgClip="text"
+              fontSize="50"
+              fontWeight="extrabold"
+              mt={10}>
+              Your Personal Finance Assistant
+            </Text>
+          </SlideFade>
           <HStack gap={20}>
             <InfoCard
               imageSrc="/images/Minnow.svg"

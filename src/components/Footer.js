@@ -1,26 +1,34 @@
 import { Flex, Link, Spacer, Text, Box, Tooltip } from "@chakra-ui/react";
 import "../styles/Footer.css";
-import { FaInstagram } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
 import { FaYoutube } from "react-icons/fa";
-
-
 
 function Footer() {
   return (
     <div id="Footer">
-      <Flex p={5} mt={10} bg="blue.900" color="white" gap="5" alignItems='center'>
+      <Flex
+        p={5}
+        mt={10}
+        bg="blue.900"
+        color="white"
+        gap="5"
+        alignItems="center">
         <Text p="1">© 2024 Finnow</Text>
-        <Link href="https://github.com/SriramGaddam5/Finnow" isExternal>
-        <FaInstagram />
-        </Link>
-        <Link href="https://github.com/SriramGaddam5/Finnow" isExternal>
-        <FaYoutube />
-        </Link>
-        <Spacer/>
-        <Spacer/>
+        <Tooltip label="Check out our Instagram!" rounded="lg">
+          <Link href="https://github.com/SriramGaddam5/Finnow" isExternal>
+            <AiFillInstagram size={25} />
+          </Link>
+        </Tooltip>
+        <Tooltip label="Subscribe to our YouTube channel!" rounded="lg">
+          <Link href="https://github.com/SriramGaddam5/Finnow" isExternal>
+            <FaYoutube size={25} />
+          </Link>
+        </Tooltip>
+        <Spacer />
+        <Spacer />
         <Tooltip label="Our Privacy Policy" rounded="lg">
           <Link href="/privacy" isExternal>
-          <Text p="1">Privacy Policy</Text>
+            <Text p="1">Privacy Policy</Text>
           </Link>
         </Tooltip>
         <Tooltip label="Check out the GitHub" rounded="lg">

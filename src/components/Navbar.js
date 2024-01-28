@@ -15,6 +15,15 @@ function Navbar() {
           </Link>
         </Tooltip>
         <Spacer />
+        <Tooltip label="Get started" rounded="lg">
+          <Link
+            href="/Data"
+            _hover={{ color: "blue.500", transform: "scale(0.99)" }}
+            _active={{ color: "blue.400", transform: "scale(1.01)" }}>
+            Data
+          </Link>
+        </Tooltip>
+        <Spacer />
         <Tooltip label="Ask Finnow any questions you have" rounded="lg">
           <Link
             href="/learn"
