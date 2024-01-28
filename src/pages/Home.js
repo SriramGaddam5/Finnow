@@ -113,11 +113,11 @@ function Home() {
   if (init) {
     return (
       <div id="Body">
-        {/* <Particles
+        <Particles
           id="particles"
           particlesLoaded={particlesLoaded}
           options={options}
-        /> */}
+        />
         <VStack>
           <Text
             id="title"
