@@ -153,16 +153,20 @@ function Home() {
         </Text>
         <HStack gap={20}>
           <InfoCard
-            imageSrc="/images/learning.jpg"
+            imageSrc="/images/Piggy bank.svg"
+            imageWidth={200}
+            imageHeight={200}
             imageAlt="Learning image"
             cardTitle="Start learning"
             cardDescription="Learn more about finance"
             cardLink="/learn"
           />
           <InfoCard
-            imageSrc="/images/about.jpg"
+            imageSrc="/images/Shark fin.svg"
+            imageWidth={200}
+            imageHeight={200}
             imageAlt="About image"
-            cardTitle="About me"
+            cardTitle="About us"
             cardDescription="Learn more about Finnow"
             cardLink="/about"
           />

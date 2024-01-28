@@ -15,6 +15,8 @@ import "../styles/InfoCard.css";
 
 function InfoCard({
   imageSrc,
+  imageWidth,
+  imageHeight,
   imageAlt,
   cardTitle,
   cardDescription,
@@ -47,7 +49,8 @@ function InfoCard({
             <HStack>
               <Image
                 src={imageSrc}
-                maxW={{ base: "100%", sm: "200px" }}
+                width={imageWidth}
+                height={imageHeight}
                 fallbackSrc="/images/Fallback.svg"
                 alt={imageAlt}
                 borderRadius="lg"
