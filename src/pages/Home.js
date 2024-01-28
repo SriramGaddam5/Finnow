@@ -153,6 +153,15 @@ function Home() {
           Finnow
         </Text>
         <HStack gap={20}>
+        <InfoCard
+            imageSrc="/images/Piggy bank.svg"
+            imageWidth={200}
+            imageHeight={200}
+            imageAlt="Learning image"
+            cardTitle="Tell Finnow about yourself"
+            cardDescription="Get started with Finnow here"
+            cardLink="/data"
+          />
           <InfoCard
             imageSrc="/images/Piggy bank.svg"
             imageWidth={200}
