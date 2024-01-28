@@ -14,13 +14,17 @@ function Footer() {
         gap="5"
         alignItems="center">
         <Text p="1">© 2024 Finnow</Text>
-        <Tooltip label="Check out our Instagram!" rounded="lg">
-          <Link href="https://github.com/SriramGaddam5/Finnow" isExternal>
+        <Tooltip label="Check out the hackathon Instagram!" rounded="lg">
+          <Link href="https://www.instagram.com/tamuhack/" isExternal>
             <AiFillInstagram size={25} />
           </Link>
         </Tooltip>
-        <Tooltip label="Subscribe to our YouTube channel!" rounded="lg">
-          <Link href="https://github.com/SriramGaddam5/Finnow" isExternal>
+        <Tooltip
+          label="Subscribe to the hackathon YouTube channel!"
+          rounded="lg">
+          <Link
+            href="https://www.youtube.com/channel/UC8EIHSuBGeNlUm1G0STS2yg"
+            isExternal>
             <FaYoutube size={25} />
           </Link>
         </Tooltip>
