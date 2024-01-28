@@ -144,6 +144,7 @@ function Home() {
       />
       <VStack>
         <Text
+          id="title"
           bgGradient="linear(to-r, blue.200, blue.900)"
           bgClip="text"
           fontSize="6xl"
