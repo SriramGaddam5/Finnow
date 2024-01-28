@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Learn from "./pages/Learn";
 import About from "./pages/About";
 import Error from "./pages/Error";
+import Privacy from "./pages/Privacy";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "../src/styles/App.css";
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/learn" element={<Learn />} />
           <Route path="/about" element={<About />} />
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="/*" element={<Error />} />
         </Routes>
       </Router>

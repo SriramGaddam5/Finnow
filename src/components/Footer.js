@@ -6,7 +6,13 @@ function Footer() {
     <div id="Footer">
       <Flex p={5} mt={10} bg="blue.900" color="white" gap="5">
         <Text p="1">© 2024 Finnow</Text>
-        <Spacer />
+        <Spacer/>
+        <Spacer/>
+        <Tooltip label="Our Privacy Policy" rounded="lg">
+          <Link href="/privacy" isExternal>
+          <Text p="1">Privacy Policy</Text>
+          </Link>
+        </Tooltip>
         <Tooltip label="Check out the GitHub" rounded="lg">
           <Link href="https://github.com/SriramGaddam5/Finnow" isExternal>
             <Box

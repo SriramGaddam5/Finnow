@@ -8,9 +8,11 @@ function About() {
       <Heading p="30px">About Us</Heading>
       <HStack mx="5" my="10">
         <Text p="30px">
-          With Finnow you can learn anything from the basics of finance to the
-          most advanced topics. We help assist our users with their finananical
-          journey by providing them with the tools they need to succeed.
+        Finnow is a platform intended to assist users with their financial journey. 
+        It utilizes an LLM that gives users advice based on their inputted financial data, 
+        making recommendations on savings, investments, income, and expenditures. 
+        The goal of our platform is to support financial literacy and lower 
+        the barrier of entry into the financial world.
         </Text>
       </HStack>
     </div>
