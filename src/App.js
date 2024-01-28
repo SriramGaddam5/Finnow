@@ -15,6 +15,10 @@ function App() {
         rel="stylesheet"
         href="//fonts.googleapis.com/css?family=Quicksand&amp;lang=en"
       />
+      <link
+        rel="stylesheet"
+        href="//fonts.googleapis.com/css?family=Monoton&amp;lang=en"
+      />
       <Navbar />
       <Router>
         <Routes>
