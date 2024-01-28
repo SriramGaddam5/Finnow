@@ -6,7 +6,7 @@ function Navbar() {
     <div id="Navbar">
       <Flex px={20} py={5} color="blue.600" fontWeight="bold" shadow="sm">
         <Spacer />
-        <Tooltip label="Home page" rounded="lg">
+        <Tooltip label="Go back home" rounded="lg">
           <Link
             href="/"
             _hover={{ color: "blue.500", transform: "scale(0.99)" }}
@@ -15,7 +15,7 @@ function Navbar() {
           </Link>
         </Tooltip>
         <Spacer />
-        <Tooltip label="See my work" rounded="lg">
+        <Tooltip label="Ask Finnow any questions you have" rounded="lg">
           <Link
             href="/learn"
             _hover={{ color: "blue.500", transform: "scale(0.99)" }}
@@ -24,7 +24,7 @@ function Navbar() {
           </Link>
         </Tooltip>
         <Spacer />
-        <Tooltip label="Learn more about me" rounded="lg">
+        <Tooltip label="Learn more about us" rounded="lg">
           <Link
             href="/about"
             _hover={{ color: "blue.500", transform: "scale(0.99)" }}
