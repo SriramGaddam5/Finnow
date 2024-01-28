@@ -180,7 +180,7 @@ function Home() {
               fontSize="50"
               fontWeight="extrabold"
               mt={10}>
-              Your Personal Finance Assistant
+              Your Personal Financial Assistant
             </Text>
           </SlideFade>
           <HStack gap={20}>
