@@ -1,6 +1,7 @@
 import { Text, VStack, HStack, SlideFade } from "@chakra-ui/react";
 import { useEffect, useMemo, useState, useRef } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { LuPiggyBank } from "react-icons/lu";
 import { loadSlim } from "@tsparticles/slim";
 import InfoCard from "../components/InfoCard";
 import { useInViewport } from "react-in-viewport";
@@ -182,6 +183,7 @@ function Home() {
               mt={10}>
               Your Personal Financial Assistant
             </Text>
+            <LuPiggyBank id='slide-right' size = {100}/>
           </SlideFade>
           <HStack gap={20}>
             <InfoCard
