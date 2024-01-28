@@ -54,6 +54,7 @@ function InfoCard({
                 fallbackSrc="/images/Fallback.svg"
                 alt={imageAlt}
                 borderRadius="lg"
+                p={5}
               />
               <VStack p={5}>
                 <Heading size="md" my="2">
