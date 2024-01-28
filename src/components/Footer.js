@@ -10,7 +10,9 @@ function Footer() {
     <div id="Footer">
       <Flex p={5} mt={10} bg="blue.900" color="white" gap="5" alignItems='center'>
         <Text p="1">© 2024 Finnow</Text>
+        <Link href="https://github.com/SriramGaddam5/Finnow" isExternal>
         <FaInstagram />
+        </Link>
         <Link href="https://github.com/SriramGaddam5/Finnow" isExternal>
         <FaYoutube />
         </Link>
