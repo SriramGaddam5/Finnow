@@ -13,7 +13,7 @@ function Learn() {
     <div id="Body">
       <Heading p="30px">Learn</Heading>
       <VStack p="30px" spacing="20px">
-        <Text>Ask your questions here</Text>
+        <Text fontSize={"xl"}>Ask your questions here</Text>
         <Input placeholder="Type your question here" />
         <Button colorScheme="blue">Submit</Button>
         <br />

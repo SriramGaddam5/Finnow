@@ -147,7 +147,7 @@ function Home() {
           id="title"
           bgGradient="linear(to-r, blue.200, blue.900)"
           bgClip="text"
-          fontSize="6xl"
+          fontSize="100"
           fontWeight="extrabold"
           mt={10}>
           Finnow
